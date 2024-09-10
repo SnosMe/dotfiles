@@ -1,0 +1,7 @@
+[user]
+	email = snosme@gmail.com
+	name = Alexander Drozdov
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
