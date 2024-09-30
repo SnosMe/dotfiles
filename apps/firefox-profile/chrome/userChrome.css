@@ -1,0 +1,14 @@
+@import url(./tab_separator_lines.css);
+@import url(./navbar_style_as_selected_tab.css);
+
+/* === Hide some buttons === */
+#forward-button, #alltabs-button {
+  display: none;
+}
+
+/* === Remove drag space === */
+@media (-moz-platform: windows) {
+  :root[sizemode="normal"] .titlebar-spacer[type="pre-tabs"] {
+    width: calc(2px - var(--uc-tab-separator-width)) !important;
+  }
+}

@@ -1,0 +1,70 @@
+#nav-bar {
+  padding-bottom: 4px !important;
+}
+#urlbar-container {
+  padding-block: 0 !important;
+}
+#nav-bar-customization-target {
+  position: relative;
+}
+#nav-bar::before {
+  content: '';
+  display: block;
+  inset: 4px;
+  top: 0;
+  position: absolute;
+  pointer-events: none;
+
+  background-color: var(--tab-selected-bgcolor);
+  outline: 1px solid var(--tab-selected-outline-color);
+  outline-offset: -1px;
+  border-radius: 4px;
+}
+
+#navigator-toolbox {
+  --toolbar-bgcolor: transparent;
+  --toolbar-field-background-color: transparent;
+  /* misc. make the tab the same height as the #urlbar */
+  --tab-min-height: 32px;
+
+  /* Override for "autohide_bookmarks_and_main_toolbars.css" */
+  --uc-navbar-height: -36px;
+}
+
+/* misc. shrink spacers in the #tabbrowser-arrowscrollbox */
+spacer[part="overflow-start-indicator"],
+spacer[part="overflow-end-indicator"] {
+  height: 60%;
+  align-self: center;
+}
+
+/* misc. align first tab */
+:root:not([sizemode="normal"]) .titlebar-spacer[type="pre-tabs"] {
+  display: block !important;
+  width: calc(2px - var(--uc-tab-separator-width)) !important;
+}
+
+/* misc. add separators around #urlbar */
+#urlbar {
+  border-inline: 1px solid transparent !important;
+  padding: 0 var(--urlbar-margin-inline) !important;
+}
+#urlbar:not([focused]) {
+  border-image: 0 1 linear-gradient(
+    transparent 20%,
+    color-mix(in srgb, currentColor 20%, transparent) 20%,
+    color-mix(in srgb, currentColor 20%, transparent) 80%,
+    transparent 80%
+  ) !important;
+}
+#urlbar[breakout][breakout-extend] {
+  width: 100% !important;
+  left: 0 !important;
+  padding: 0 !important;
+}
+
+/* misc. wanna some blur? */
+#nav-bar::before,
+.tab-background:is([selected], [multiselected]) {
+  /* backdrop-filter: blur(1px); */
+}
