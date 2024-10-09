@@ -1,0 +1,125 @@
+# Read `man 5 sway` for a complete reference.
+
+### Variables
+#
+set $mod Mod4
+set $term foot
+set $menu wmenu-run
+
+## https://www.freepik.com/free-ai-image/view-mountain-with-dreamy-aesthetic_266563285.htm
+output * bg ~/Downloads/view-mountain-with-dreamy-aesthetic.jpg fill
+## swaymsg -t get_outputs
+output DVI-D-1 position 0 0
+output HDMI-A-1 position 1280 0
+
+### Key bindings
+#
+# Basics:
+#
+    # Start a terminal
+    bindsym $mod+Return exec $term
+
+    # Start your launcher
+    bindsym $mod+r exec $menu
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+#
+# Workspaces:
+#
+    font system-ui 10
+    gaps inner 8
+    gaps outer 8
+    gaps top 0
+    default_border pixel 2
+    titlebar_border_thickness 0
+    titlebar_padding 6 2
+    #                       border  bg        text
+    client.focused          #ff0000 #e46464bf #5c0a0a #e46464bf
+    client.focused_inactive #ff0000 #4a363759 #674f4c
+    client.unfocused        #ff0000 #4a363759 #674f4c
+
+    workspace_layout tabbed
+    default_orientation vertical
+    workspace_auto_back_and_forth yes
+    floating_modifier $mod normal
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
+    bindsym Control+$mod+Left workspace prev_on_output
+    bindsym Control+$mod+Right workspace next_on_output
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
+    bindsym $mod+Up focus up
+    bindsym $mod+Down focus down
+    bindsym $mod+Left focus left
+    bindsym $mod+Right focus right
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Right move right
+    # Scratchpad & Floating
+    bindsym $mod+Shift+minus move scratchpad
+    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+minus scratchpad show
+    bindsym $mod+space focus mode_toggle
+    # Layout: create a new container (vertical split)
+    bindsym $mod+c splitv
+    bindsym $mod+a focus parent
+    # Layout: switch the current container layout
+    bindsym $mod+t layout toggle tabbed stacking
+    bindsym $mod+s layout toggle split
+    # Misc
+    bindsym $mod+f fullscreen
+    bindsym $mod+Shift+q kill
+    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+e exec swaymsg exit
+#
+# Utilities:
+#
+    # Special keys to adjust volume via PulseAudio
+    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+    # Special keys to adjust brightness via brightnessctl
+    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+    # Special key to take a screenshot with grim
+    bindsym Print exec grim
+
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    position top
+
+    status_command while date +'%d.%m.%Y %X'; do sleep 1; done
+
+    font monospace 10
+
+    gaps 8 16
+    workspace_min_width 24
+    colors {
+        statusline #800000
+        background #00000000
+        focused_workspace  #e46464bf #e46464bf #5c0a0a
+        active_workspace   #4a363759 #4a363759 #674f4c
+        inactive_workspace #4a363759 #4a363759 #674f4c
+    }
+}
+
+include /etc/sway/config.d/*
