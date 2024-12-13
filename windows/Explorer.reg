@@ -12,6 +12,14 @@ Windows Registry Editor Version 5.00
 ; Hide Navigation pane
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
 "PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,63,04,00,00
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CIDOpen\Modules\GlobalSettings\Sizer]
+"PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,b8,02,00,00
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CIDSave\Modules\GlobalSettings\Sizer]
+"PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,b8,02,00,00
+
+; Prevent Automatic Folder Type Discovery (aka SniffedFolderType)
+[HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
+"FolderType"="NotSpecified"
 
 ; Hide entries from "Show all folders" (Desktop virtual folder)
 ; https://learn.microsoft.com/en-us/previous-versions/windows/desktop/legacy/cc144096(v=vs.85)
