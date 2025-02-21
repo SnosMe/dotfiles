@@ -9,6 +9,6 @@
 /* === Remove drag space === */
 @media (-moz-platform: windows) {
   :root[sizemode="normal"] .titlebar-spacer[type="pre-tabs"] {
-    width: calc(2px - var(--uc-tab-separator-width)) !important;
+    width: 2px !important;
   }
 }

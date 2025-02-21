@@ -21,14 +21,16 @@
   border-radius: 4px;
 }
 
-#navigator-toolbox {
-  --toolbar-bgcolor: transparent;
-  --toolbar-field-background-color: transparent;
-  /* misc. make the tab the same height as the #urlbar */
-  --tab-min-height: 32px;
+#main-window {
+  --toolbar-bgcolor: transparent !important;
+  --toolbar-field-background-color: transparent !important;
 
   /* Override for "autohide_bookmarks_and_main_toolbars.css" */
   --uc-navbar-height: -36px;
+}
+:root {
+  /* misc. make the tab the same height as the #urlbar */
+  --tab-min-height: 32px !important;
 }
 
 /* misc. shrink spacers in the #tabbrowser-arrowscrollbox */
@@ -41,7 +43,7 @@ spacer[part="overflow-end-indicator"] {
 /* misc. align first tab */
 :root:not([sizemode="normal"]) .titlebar-spacer[type="pre-tabs"] {
   display: block !important;
-  width: calc(2px - var(--uc-tab-separator-width)) !important;
+  width: 2px !important;
 }
 
 /* misc. add separators around #urlbar */
@@ -57,10 +59,8 @@ spacer[part="overflow-end-indicator"] {
     transparent 80%
   ) !important;
 }
-#urlbar[breakout][breakout-extend] {
-  width: 100% !important;
-  left: 0 !important;
-  padding: 0 !important;
+:root {
+  --urlbar-margin-inline: 0px !important;
 }
 
 /* misc. wanna some blur? */
