@@ -17,6 +17,7 @@ pref("extensions.pocket.enabled", false);
 pref("browser.uiCustomization.state", `{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":[],"nav-bar":["back-button","forward-button","stop-reload-button","vertical-spacer","urlbar-container","downloads-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button"],"dirtyAreaCache":["nav-bar","vertical-tabs","TabsToolbar","toolbar-menubar","PersonalToolbar"],"currentVersion":21,"newElementCount":4}`);
 pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 pref("findbar.highlightAll", true);
+pref("nglayout.enable_drag_images", false);
 pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 // Urlbar
 pref("browser.urlbar.suggest.topsites", false);
