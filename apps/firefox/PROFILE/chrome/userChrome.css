@@ -6,6 +6,30 @@
   display: none;
 }
 
+/* === Urlbar === */
+#urlbar-searchmode-switcher {
+  --urlbar-searchmodeswitcher-margin-inline-end: 2px;
+  #urlbar[usertyping][breakout-extend="true"] & {
+    padding-inline: 17px 14px !important;
+  }
+}
+#urlbar-searchmode-switcher {
+  background: none !important;
+}
+#searchmode-switcher-dropmarker {
+  display: none;
+}
+
+#identity-box.chromeUI  {
+  --urlbar-searchmodeswitcher-margin-inline-end: 2px;
+  & #identity-icon-box {
+    background: none !important;
+  }
+  & #identity-icon-label {
+    font-variant: small-caps;
+  }
+}
+
 /* === Remove drag space === */
 @media (-moz-platform: windows) {
   :root[sizemode="normal"] .titlebar-spacer[type="pre-tabs"] {

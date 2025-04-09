@@ -20,6 +20,7 @@ pref("findbar.highlightAll", true);
 pref("nglayout.enable_drag_images", false);
 pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 // Urlbar
+pref("browser.urlbar.showSearchTerms.enabled", false);
 pref("browser.urlbar.suggest.topsites", false);
 pref("browser.urlbar.suggest.trending", false);
 pref("browser.urlbar.shortcuts.history", false);
@@ -48,7 +49,7 @@ function applyScriptToChrome(window) {
 }
 
 async function applyTheme() {
-	Cu.import("resource://gre/modules/AddonManager.jsm");
+	const { AddonManager } = ChromeUtils.importESModule("resource://gre/modules/AddonManager.sys.mjs");
 	let addon = await AddonManager.getAddonByID("{22b0eca1-8c02-4c0d-a5d7-6604ddd9836e}");
 	if (!addon) {
 		Services.console.logStringMessage("Installing theme...");
