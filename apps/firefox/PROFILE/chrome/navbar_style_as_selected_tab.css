@@ -64,6 +64,9 @@ spacer[part="overflow-end-indicator"] {
     transparent 80%
   ) !important;
 }
+#urlbar:not([usertyping], [breakout-extend="true"]) > #urlbar-background {
+  --toolbar-field-focus-background-color: transparent !important;
+}
 :root {
   --urlbar-margin-inline: 0px !important;
 }

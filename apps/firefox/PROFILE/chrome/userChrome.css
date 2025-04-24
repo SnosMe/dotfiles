@@ -9,6 +9,7 @@
 /* === Urlbar === */
 #urlbar-searchmode-switcher {
   --urlbar-searchmodeswitcher-margin-inline-end: 2px;
+  padding-inline: 11px 8px !important;
   #urlbar[usertyping][breakout-extend="true"] & {
     padding-inline: 17px 14px !important;
   }
