@@ -5,3 +5,5 @@
 	rebase = true
 [rebase]
 	autostash = true
+[core]
+	filemode = false

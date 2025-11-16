@@ -14,7 +14,7 @@ pref("gfx.font_rendering.cleartype_params.enhanced_contrast", 66);
 pref("identity.fxaccounts.enabled", false);
 pref("extensions.pocket.enabled", false);
 // UI
-pref("browser.uiCustomization.state", `{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":[],"nav-bar":["back-button","forward-button","stop-reload-button","vertical-spacer","urlbar-container","downloads-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button"],"dirtyAreaCache":["nav-bar","vertical-tabs","TabsToolbar","toolbar-menubar","PersonalToolbar"],"currentVersion":21,"newElementCount":4}`);
+pref("browser.uiCustomization.state", `{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":[],"nav-bar":["back-button","forward-button","stop-reload-button","vertical-spacer","urlbar-container","downloads-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","screenshot-button"],"dirtyAreaCache":["nav-bar","vertical-tabs","TabsToolbar","toolbar-menubar","PersonalToolbar"],"currentVersion":23,"newElementCount":4}`);
 pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper", "dark-panda");
 pref("findbar.highlightAll", true);
@@ -27,15 +27,17 @@ pref("browser.urlbar.suggest.trending", false);
 pref("browser.urlbar.shortcuts.history", false);
 pref("browser.urlbar.shortcuts.bookmarks", false);
 pref("browser.urlbar.shortcuts.tabs", false);
-Services.search.getEngines().then((engines) => {
-	for (const engine of engines) {
-		engine.hideOneOffButton = true;
-	}
-});
 // Devtools
 pref("devtools.theme", "light");
 pref("devtools.inspector.three-pane-enabled", false);
 pref("devtools.toolbox.selectedTool", "webconsole");
+pref("devtools.chrome.enabled", true);
+pref("devtools.debugger.remote-enabled", true);
+// *.onion & disable WebRTC
+pref("dom.securecontext.allowlist_onions", true);
+pref("security.mixed_content.upgrade_display_content", false);
+pref("security.mixed_content.block_display_content", true);
+pref("media.peerconnection.enabled", false);
 // etc.
 pref("browser.shell.checkDefaultBrowser", false);
 pref("doh-rollout.disable-heuristics", true);

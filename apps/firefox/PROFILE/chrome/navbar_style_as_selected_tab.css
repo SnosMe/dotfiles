@@ -23,7 +23,7 @@
   background-color: var(--tab-selected-bgcolor);
   outline: 1px solid var(--tab-selected-outline-color);
   outline-offset: -1px;
-  border-radius: 4px;
+  border-radius: var(--tab-border-radius);
 }
 
 #main-window {

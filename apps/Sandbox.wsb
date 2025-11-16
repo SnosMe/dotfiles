@@ -1,0 +1,8 @@
+<Configuration>
+  <LogonCommand>
+    <!-- Fix programs are slow to install by disabling Smart App Control. -->
+    <!-- https://github.com/microsoft/Windows-Sandbox/issues/68#issuecomment-2684406010 -->
+    <Command>reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\CI\Policy" /v "VerifiedAndReputablePolicyState" /t REG_DWORD /d 0 /f</Command>
+    <Command>CiTool.exe --refresh</Command>
+  </LogonCommand>
+</Configuration>
