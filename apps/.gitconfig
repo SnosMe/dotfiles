@@ -1,3 +1,5 @@
+[core]
+	# pager = cat
 [user]
 	email = snosme@gmail.com
 	name = Alexander Drozdov
@@ -7,3 +9,9 @@
 	autostash = true
 [core]
 	filemode = false
+	# editor = edit
+	autocrlf = false
+[alias]
+	sclone = clone --filter=blob:none
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs

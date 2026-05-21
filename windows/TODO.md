@@ -1,3 +1,0 @@
-```
-winget install Git.MinGit
-```

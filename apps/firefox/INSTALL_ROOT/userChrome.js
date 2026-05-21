@@ -10,6 +10,8 @@ pref("browser.startup.page", 3);
 // Text rendering (on Windows)
 pref("gfx.font_rendering.cleartype_params.rendering_mode", 5);
 pref("gfx.font_rendering.cleartype_params.enhanced_contrast", 66);
+// Limit frame rate to my secondary monitor
+pref("layout.frame_rate", 60);
 // Cloud sync
 pref("identity.fxaccounts.enabled", false);
 pref("extensions.pocket.enabled", false);
@@ -20,6 +22,7 @@ pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper", "dark-pand
 pref("findbar.highlightAll", true);
 pref("nglayout.enable_drag_images", false);
 pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+pref("reader.parse-on-load.enabled", false);
 // Urlbar
 pref("browser.urlbar.showSearchTerms.enabled", false);
 pref("browser.urlbar.suggest.topsites", false);

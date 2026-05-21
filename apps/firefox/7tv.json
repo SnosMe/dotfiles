@@ -1,0 +1,77 @@
+{
+  "timestamp": 1000000000000,
+  "settings": [
+    {
+      "key": "chat_input.autocomplete.chatters",
+      "type": "boolean",
+      "value": false,
+      "timestamp": 1000000000000
+    },
+    {
+      "key": "chat_input.spam.bypass_duplicate",
+      "type": "boolean",
+      "value": true,
+      "timestamp": 1000000000000
+    },
+    {
+      "key": "chat.mod_logs.enabled",
+      "type": "boolean",
+      "value": true,
+      "timestamp": 1000000000000
+    },
+    {
+      "key": "chat.mod_messages",
+      "type": "boolean",
+      "value": true,
+      "timestamp": 1000000000000
+    },
+    {
+      "key": "general.autoclaim.channel_points",
+      "type": "boolean",
+      "value": true,
+      "timestamp": 1000000000000
+    },
+    {
+      "key": "layout.hide_bits_buttons",
+      "type": "boolean",
+      "value": true,
+      "timestamp": 1000000000000
+    },
+    {
+      "key": "layout.hide_channel_leaderboard",
+      "type": "boolean",
+      "value": true,
+      "timestamp": 1000000000000
+    },
+    {
+      "key": "layout.hide_hype_chat_button",
+      "type": "boolean",
+      "value": true,
+      "timestamp": 1000000000000
+    },
+    {
+      "key": "layout.hide_prime_offers",
+      "type": "boolean",
+      "value": true,
+      "timestamp": 1000000000000
+    },
+    {
+      "key": "layout.hide_stories",
+      "type": "boolean",
+      "value": true,
+      "timestamp": 1000000000000
+    },
+    {
+      "key": "player.video_stats",
+      "type": "boolean",
+      "value": true,
+      "timestamp": 1000000000000
+    },
+    {
+      "key": "ui.transparent_backgrounds",
+      "type": "boolean",
+      "value": false,
+      "timestamp": 1000000000000
+    }
+  ]
+}

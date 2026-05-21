@@ -1,9 +1,18 @@
-.search-wrapper .search-handoff-button {
-  --newtab-background-color-secondary: rgba(200 200 200 / 0.1);
+content-search-handoff-ui {
+  border-radius: var(--border-radius-medium);
   outline: 1px solid rgba(255 255 255 / 0.1);
-  box-shadow: none !important;
+  --content-search-handoff-ui-background-color: rgba(200 200 200 / 0.1) !important;
+  --content-search-handoff-ui-border-width: 0 !important;
+  --content-search-handoff-ui-unfocused-border-color: transparent !important;
+  --box-shadow-level-3: none !important;
 }
-.search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
+
+content-search-handoff-ui[fakefocus]:not([disabled]) {
   outline: 2px solid rgba(255 255 255 / 0.2);
-  border-color: transparent !important;
+  --content-search-handoff-ui-fakefocus-border-color: transparent !important;
+  --content-search-handoff-ui-fakefocus-box-shadow-inner: transparent !important;
+}
+
+.personalize-button {
+  background: rgba(200 200 200 / 0.1) !important;
 }
