@@ -1,0 +1,39 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"BackgroundModeEnabled"=dword:00000000
+"AllowPrelaunch"=dword:00000000
+"StartupBoostEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\Connectivity\DisableCrossDeviceResume]
+"value"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:00000000
+
+; transmission of diagnostic and usage information
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
+"Start"=dword:00000004
+
+; Windows Health and Optimized Experiences
+; monitors for slow app launches and system sluggishness
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\whesvc]
+"Start"=dword:00000004
+
+; Sync Host
+; synchronizes mail, contacts, calendar
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\OneSyncSvc]
+"Start"=dword:00000004
+
+; Web Account Manager
+; provides single-sign-on to apps and services
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TokenBroker]
+"Start"=dword:00000004
+
+; Geolocation Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lfsvc]
+"Start"=dword:00000004
+
+; Program Compatibility Assistant Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PcaSvc]
+"Start"=dword:00000004

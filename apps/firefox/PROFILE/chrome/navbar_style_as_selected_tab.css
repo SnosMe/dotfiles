@@ -5,6 +5,7 @@
 
 #nav-bar {
   padding-bottom: 4px !important;
+  background-color: initial !important;
 }
 #urlbar-container {
   padding-block: 0 !important;
@@ -20,7 +21,7 @@
   position: absolute;
   pointer-events: none;
 
-  background-color: var(--tab-selected-bgcolor);
+  background-color: var(--tab-background-color-selected);
   outline: 1px solid var(--tab-selected-outline-color);
   outline-offset: -1px;
   border-radius: var(--tab-border-radius);

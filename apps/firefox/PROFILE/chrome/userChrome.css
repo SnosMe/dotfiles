@@ -21,6 +21,10 @@
   display: none;
 }
 
+.searchmode-switcher {
+  --button-background-color: transparent !important
+}
+
 #identity-box.chromeUI  {
   --urlbar-searchmodeswitcher-margin-inline-end: 2px;
   & #identity-icon-box {

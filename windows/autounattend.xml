@@ -20,18 +20,6 @@
 				<RunSynchronousCommand wcm:action="add">
 					<Order>2</Order><Path>reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "HideFirstRunExperience" /t REG_DWORD /d 1 /f</Path>
 				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>99</Order><Path>reg.exe add "HKLM\SOFTWARE\Microsoft\Windows Defender\Features" /v "TamperProtection" /t REG_DWORD /d 0 /f</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>100</Order><Path>reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d 1 /f</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>101</Order><Path>reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableRealtimeMonitoring" /t REG_DWORD /d 1 /f</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>102</Order><Path>reg.exe add "HKLM\System\CurrentControlSet\Services\WinDefend" /v "Start" /t REG_DWORD /d 4 /f</Path>
-				</RunSynchronousCommand>
 			</RunSynchronous>
 		</component>
 	</settings>

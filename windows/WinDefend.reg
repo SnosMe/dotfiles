@@ -1,0 +1,40 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity]
+"Enabled"=dword:00000000
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard]
+"EnableVirtualizationBasedSecurity"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows]
+"EnableSmartScreen"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost]
+"EnableWebContentEvaluation"=dword:00000000
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CI\Policy]
+"VerifiedAndReputablePolicyState"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+"DisableAntiSpyware"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection]
+"DisableRealtimeMonitoring"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend]
+"Start"=dword:00000004
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdNisDrv]
+"Start"=dword:00000004
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdNisSvc]
+"Start"=dword:00000004
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Sense]
+"Start"=dword:00000004
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdBoot]
+"Start"=dword:00000004
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdFilter]
+"Start"=dword:00000004
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MDCoreSvc]
+"Start"=dword:00000004
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\webthreatdefsvc]
+"Start"=dword:00000004
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\webthreatdefusersvc]
+"Start"=dword:00000004
+
+; Can't be disabled even from Safe boot
+; [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SecurityHealthService]
+; [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]

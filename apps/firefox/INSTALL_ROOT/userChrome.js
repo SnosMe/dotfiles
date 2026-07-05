@@ -12,12 +12,16 @@ pref("gfx.font_rendering.cleartype_params.rendering_mode", 5);
 pref("gfx.font_rendering.cleartype_params.enhanced_contrast", 66);
 // Limit frame rate to my secondary monitor
 pref("layout.frame_rate", 60);
-// Cloud sync
+// Cloud sync & AI
 pref("identity.fxaccounts.enabled", false);
 pref("extensions.pocket.enabled", false);
+pref("browser.ml.enable", false);
+pref("browser.ml.chat.enabled", false);
+pref("browser.ml.linkPreview.enabled", false);
 // UI
 pref("browser.uiCustomization.state", `{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":[],"nav-bar":["back-button","forward-button","stop-reload-button","vertical-spacer","urlbar-container","downloads-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","screenshot-button"],"dirtyAreaCache":["nav-bar","vertical-tabs","TabsToolbar","toolbar-menubar","PersonalToolbar"],"currentVersion":23,"newElementCount":4}`);
 pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+pref("browser.newtabpage.activity-stream.newtabWallpapers.user.enabled", true);
 pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper", "dark-panda");
 pref("findbar.highlightAll", true);
 pref("nglayout.enable_drag_images", false);

@@ -1,5 +1,5 @@
 content-search-handoff-ui {
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--content-search-handoff-ui-border-radius);
   outline: 1px solid rgba(255 255 255 / 0.1);
   --content-search-handoff-ui-background-color: rgba(200 200 200 / 0.1) !important;
   --content-search-handoff-ui-border-width: 0 !important;
@@ -13,6 +13,8 @@ content-search-handoff-ui[fakefocus]:not([disabled]) {
   --content-search-handoff-ui-fakefocus-box-shadow-inner: transparent !important;
 }
 
-.personalize-button {
-  background: rgba(200 200 200 / 0.1) !important;
+moz-button.open-customization-button {
+  --button-border-color: rgba(255 255 255 / 0.1) !important;
+  --button-background-color: rgba(200 200 200 / 0.1) !important;
+  --button-border: var(--border-width) solid var(--button-border-color) !important;
 }
